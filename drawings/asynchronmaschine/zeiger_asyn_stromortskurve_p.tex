@@ -7,26 +7,32 @@
 \draw [->, thick] (0, -2) -- (0, 2.5) node [right] {Re};
 
 % Kreis
-\coordinate (M) at (3, 0);
+\coordinate (M) at (3, 0.7);
 \draw [thick] (M) circle (2);
 
 % Vektoren
 \coordinate (U1) at (0, 1.75);
-\coordinate (Pinf) at ($(M)+(2,0)$);
-\coordinate (P0) at ($(M)+(-2,0)$);
-\coordinate (Pa) at ($(M)+(30:2)$);
+\coordinate (P0) at ($(M)+(193:2)$);
+\coordinate (Pinf) at ($(P0)+(13:4)$);
+\coordinate (Pa) at ($(M)+(37:2)$);
 \coordinate (Pn) at ($(M)+(130:2)$);
-\coordinate (B) at ($(P0)!(Pn)!(Pinf)$);
+\coordinate (H) at ($(M)+(-13:2)$);
+\coordinate (D) at ($(0,0)!(Pn)!(6,0)$);
 
 \draw [->, very thick, blue] (0, 0) -- (U1);
+\draw [name path= Cline, thick] (P0) -- (H);
 \draw [name path= Bline, very thick, green!70!blue] (P0) -- (Pinf) node [black, pos=0.8, below, sloped] {Drehmomentlinie};
 \draw [name path= Aline, very thick, green!70!blue] (P0) -- (Pa) node [black, pos=0.8, above, sloped] {Leistungslinie};
-\draw [name path= dashedline, densely dashed] (Pn) -- (B);
+\draw [name path= dashedline, densely dashed] (Pn) -- (D);
+\draw [thick] (M) -- +(105:2) node {$\bullet$} -- +(-75:2) node {$\bullet$};
+\draw [black!50!white] (M) ++(105:0.2) arc (105:195:0.2);
+\draw [black!50!white] (M) ++(150:0.1) node {.};
 
 \path [name intersections={of=Aline and dashedline, by=A}];
+\path [name intersections={of=Bline and dashedline, by=B}];
+\path [name intersections={of=Cline and dashedline, by=C}];
 
 % Beschriftung
-\node at (M) [above] {$M$};
 \node at (M) {$\times$};
 \node at (Pinf) {$\bullet$};
 \node at (P0) {$\bullet$};
@@ -34,13 +40,20 @@
 \node at (Pn) {$\bullet$};
 \node at (A) {$\bullet$};
 \node at (B) {$\bullet$};
+\node at (C) {$\bullet$};
+\node at (D) {$\bullet$};
 \node at (U1) [left] {$\underline U_1$};
 \node at (Pn) [left] {$P_N$};
 \node at (Pa) [right] {$P_A$};
-\draw (Pinf) +(0, -0.25) node [right] {$P_\infty$};
-\draw (P0) +(0, -0.25) node [left] {$P_0$};
-\draw (A) +(0, 0.15) node [left] {A};
-\draw (B) +(0, -0.15) node [left] {B};
+\draw (M) ++(0.1,0) node [above] {$M$};
+\draw (M)++(105:2) node [above] {$P_K$};
+\draw (M)++(-75:2) node [below] {$P_K$};
+\draw (Pinf) node [right] {$P_\infty$};
+\draw (P0)  node [left] {$P_0$};
+\draw (A) +(0, 0.12) node [left] {A};
+\draw (B) +(0, 0.12) node [right] {B};
+\draw (C) +(0, 0.08) node [right] {C};
+\draw (D) +(0, -0.12) node [left] {D};
 			
 \end{tikzpicture}
 %!tikz source end

@@ -21,6 +21,8 @@ Erregerleistung & $P_E$ & $\unitof{\si{\watt}}$\\
 Leerlaufkurzschlussstrom & $\underline{I}_{K0}$ & $\unitof{\si{\ampere}}$\\
 Dreisträngiger Dauerkurzschlussstrom & $\underline I_{K\textrm{III}}$ & $\unitof{\si{\ampere}}$\\
 Leerlaufkurzschlussverhältnis (LKV) & $\frac{\underline{I}_{K0}}{\underline{I}_N}$ & $\unitof{\si{1}}$\\
+\cmrule
+Verketteter Fluss Permanentmagnet & $\underline{\Psi}_\text{PM}$ & $\unitof{\si{\voltsecond}}$\\
 \cbrule
 \end{tabular*}
 }
@@ -60,8 +62,8 @@ $R_1 = 0 \Rightarrow \varphi_{Z1} = 0 \Rightarrow M_i = -M_K\cdot\sin(\vartheta)
 
 \subsubsection{Leistung}
 \begin{align*}
-\underline{S}_1 &= 3\cdot \underline{U}_1\cdot\underline{I}_1^*\\
-P_1 &= S_1 \cdot\cos{(\varphi)} = 3\cdot U_1\cdot I_1\cdot\cos{(\varphi)}\\
+\underline{S}_1 &= m_1\cdot \underline{U}_1\cdot\underline{I}_1^*\\
+P_1 &= S_1 \cdot\cos{(\varphi)} = m_1\cdot U_1\cdot I_1\cdot\cos{(\varphi)}\\
 P_W &= 3\cdot U_\text{iP}\cdot I_1\cdot\cos{(\varphi)}\\
 P_\delta &= \omega_m\cdot M_i = P_W - 3\cdot R_1\cdot {I_1}^2\\
 P_m &= 2\pi\cdot n\cdot (M_i - M_R) = \omega_m\cdot (M_i - M_R) = P_\delta - P_R\\
@@ -120,6 +122,7 @@ $\underline I_2$ eilt $\underline U_\text{iP}$ um $\ang{90}$ nach
 \input{drawings/synchronmaschine/zeiger_syn}
 \end{center}
 }
+
 \sectionbox{
 \subsection{Stromortskurve}
 \begin{align*}
@@ -189,4 +192,23 @@ Maximales Reluktanzmoment bei $\abs{\vartheta} = \SI{45}{\degree}$.
 &= jX_d\cdot\underline{I}_d + jX_q\cdot\underline{I}_q + \underline{U}_\text{iP}\\
 \underline{I}_1 &= \underline{I}_d + \underline{I}_q
 \end{align*}
+}
+\sectionbox{
+\subsection{Permanenterregte Synchronmaschine}
+\subsubsection{Betriebsverhalten}
+\begin{align*}
+\underline{\Psi}_1 &= L_1\underline{I}_1 + \underline{\Psi}_\text{PM} & \Psi_\text{PM} &= \xi\cdot w_1 \cdot\hat{\Phi}_\delta\\
+\Psi_d &= L_d I_d + \Psi_\text{PM} & \Psi_q &= L_q I_q\\
+\end{align*}
+\[U_\text{iP} = \sqrt{2}\omega_1\cdot\Psi_{PM}\]
+\subsubsection{Drehmoment}
+\emphbox{
+\[M_D = \frac{m_1}{2}\cdot p\cdot\left[\Psi_\text{PM}\cdot I_q + (L_d - L_q)\cdot I_d\,I_q\right]\]}
+\textbf{äquvalent zu $M_D$ Schenkelpolläufer}
+
+\subsubsection{Betriebsarten}
+\begin{itemize}
+\item symetrischer Betrieb
+\item EC-Betrieb als BLDC\\
+\end{itemize}
 }

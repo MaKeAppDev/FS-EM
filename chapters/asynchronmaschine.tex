@@ -139,6 +139,7 @@ $j\omega_1 L_{1\sigma}\underline{I}_1$ (eilt $\underline{I}_1$ um $\ang{90}$ vor
 \sectionbox{
 \subsubsection{Schlupfgerade}
 \cookbox{Schlupfgerade $R_1 = 0\wedge R_\text{Fe}\neq 0$}{
+\item (Bei $R_\text{Fe} = 0$) Mittelpunkt $M$ auf -Im Achse
 \item Schlupfgerade an beliebiger Stelle einzeichnen
 \item gesuchtes $s$ aus Längenverhältnis zu bekanntem Schlupf bestimmen
 }
@@ -149,19 +150,26 @@ $j\omega_1 L_{1\sigma}\underline{I}_1$ (eilt $\underline{I}_1$ um $\ang{90}$ vor
 \symbolbox{
 \begin{tabular}{p{2.8cm}cc}
 Strommaßstab & $m_I$ & $\unitof{\si{\ampere\per\centi\meter}}$\\
-Leistungsmaßstab & $m_P = 3\cdot U_1\cdot m_I$ & $\unitof{\si{\watt\per\centi\meter}}$\\
+Leistungsmaßstab & $m_P = m_1\cdot U_1\cdot m_I$ & $\unitof{\si{\watt\per\centi\meter}}$\\
 Drehmomentmaßstab & $m_M = \frac{m_P}{2\pi\cdot n_\text{syn}}$ & $\unitof{\si{\newtonmeter\per\centi\meter}}$
 \end{tabular}
 }
 
 \subsubsection{Ablesbare Werte}
+\emphbox{$R_1\neq 0\wedge R_\text{Fe}\neq 0$}
 \begin{tabular}{p{4cm}l}
-Aufgenommene elektrische Leistung & $P_1 = \overline{PB}\cdot m_P$\\
+Aufgenommene elektrische Leistung & $P_1 = \overline{PD}\cdot m_P$\\
+Eisenverluste Stator & $P_\text{Fe} = \overline{CD}\cdot m_P$\\
+Kupferverluste Stator & $P_{\text{Cu}1} = \overline{BC}\cdot m_P$\\
 Kupferverluste Rotor & $P_{\text{Cu}2} = \overline{AB}\cdot m_P$\\
 Abgegebene mechanische Leistung & $P_m = \overline{PA}\cdot m_P$\\
 Inneres Drehmoment & $M_i = \overline{PB}\cdot m_M$
 \end{tabular}
-\symbolbox{Definition Punkt B: Orthogonale Projektion von $P$ auf Im-Achse}
+\symbolbox{Definition Punkt D: Orthogonale Projektion von $P$ auf Im-Achse\\
+\begin{tabularx}{\columnwidth}{lX}
+$R_1 = 0$ & $B = C$ und $M$ auf Höhe von $P_0$\\
+$R_\text{Fe} = 0$ & $C = D$ und $P_0$ auf -Im Achse
+\end{tabularx}}
 
 \input{drawings/asynchronmaschine/zeiger_asyn_stromortskurve_p}
 }
