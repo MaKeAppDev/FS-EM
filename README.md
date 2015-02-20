@@ -12,11 +12,11 @@ Public Version: [latex4ei.de](http://latex4ei.de)
 
 --------------------------------------
 
-### Upstream Repository: [TemplateFs](https://github.com/MaKeAppDev/TemplateFs)
+### Upstream Repository: [FS-GEM](https://github.com/MaKeAppDev/FS-GEM)
 
 add upstream:
 
-    git remote add upstream git@github.com:MaKeAppDev/TemplateFs.git
+    git remote add upstream git@github.com:MaKeAppDev/FS-GEM.git
 
 pull from upstream:
 
