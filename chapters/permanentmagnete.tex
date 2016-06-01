@@ -1,9 +1,7 @@
 \section{Permannentmagnete}
-\sectionbox{
+\begin{sectionbox}
 \subsection{Größen}
-\tablebox{
-\begin{tabular*}{\columnwidth}{p{4.2cm}cc}
-\ctrule
+\begin{tablebox}{p{4.2cm}cc}
 Remanenzflussdichte & $B_r$ & $\unitof{\si{\tesla}}$\\
 kritische Feldstärke (aus Kennlinie ablesen) & $H_\text{M,krit}$ & $\unitof{\si{\ampere\per\meter}}$\\
 Steigung Scherungsgerade & $k_\text{SG}$ & $\unitof{\si{1}}$\\
@@ -11,16 +9,17 @@ Luftspalthöhe Permanentmagnet & $\delta_M$ & $\unitof{\si{\milli\meter}}$\\
 Länge der Magnete & $l_M$ & $\unitof{\si{\meter}}$\\
 Höhe Permanentmagnete & $h_M$ & $\unitof{\si{\meter}}$\\
 Sicherheitsfaktor & $\gamma_\text{krit}$ & $\unitof{\si{1}}$\\
-\cbrule
-\end{tabular*}
-}
-}
-\sectionbox{
+\end{tablebox}
+\end{sectionbox}
+
+\begin{sectionbox}
 \subsection{Allgemein}
 \begin{center}
 \input{drawings/permanentmagnete/gsm_querschnitt}
 \end{center}
+\end{sectionbox}
 
+\begin{sectionbox}
 \subsubsection{Flussdichte}
 \begin{tabular}{ll}
 Luftspalt & $B_\delta = -\mu_0 \frac{h_M}{\delta''}H_M = B_M \frac{A_M}{A_\delta}(1-\sigma)$\\
@@ -44,22 +43,24 @@ Leiterquerschnitt & $A_L = \frac{A_N \cdot k_Q}{Z_N}$
 \[\sigma = k_{\sigma 1}\cdot k_{\sigma 2}\]
 
 \subsubsection{Effektiver Luftspalt}
-\begin{tabularx}{\columnwidth}{>{\centering\arraybackslash}X >{\centering\arraybackslash}X}
+\begin{tabularx}{\columnwidth}{CC}
 $\delta' = k_{C2}\cdot(\delta + \delta_M)$ & \\
 $\delta'' = (1 + k_\mu)$ & $k_\mu = \frac{V_\mu}{2\cdot H_\delta\cdot\delta'}$
 \end{tabularx}
-}
-\sectionbox{
+\end{sectionbox}
+
+\begin{sectionbox}
 \subsection{Scherungsgerade}
-\cookbox{Arbeitspunktbestimmung}{
+\begin{cookbox}{Arbeitspunktbestimmung}
 \item Scherungsgerade: $B_M = -k_\text{SG} \cdot H_M$
 \item Materialkennlinie: $B_M = \mu_0 \mu_r H_M + B_r$
 \item Schneiden von Materialkennlinie und Scherungsgerade
 \item $\Rightarrow$Arbeitspunkt: $H_M = -\frac{1}{\mu_0 \mu_r + k_\text{SG}} B_r$
-}\\\\
+\end{cookbox}
+
 Luftspaltfluss im Arbeitspunkt:\\
 \[\Phi_{\delta P} = (1-\sigma)\cdot\frac{k_\text{SG}}{\mu_0 \mu_r + k_\text{SG}}\cdot B_r\cdot l_M\cdot\frac{D_\text{I1}}{2}\cdot\beta_M\]\\
 Maximal zulässiger Ankerstrom:\\
 \[I_\text{2,max} = \frac{2\pi\cdot (h_M+\delta'')}{\omega_2\cdot\beta_M} \cdot\Bigg\vert(H_M''-H_M) \frac{\mu_0\mu_r+k_\text{SG}}{k_\text{SG}}\frac{1}{1+\frac{\delta''}{h_M}}\Bigg\vert\]
 Maximal zulässige Feldstärke: $H_M'' = \gamma_\text{krit} \cdot H_\text{M,krit}$
-}
+\end{sectionbox}
